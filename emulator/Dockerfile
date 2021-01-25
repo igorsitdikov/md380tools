@@ -21,8 +21,8 @@ RUN apt-get update && \
     curl && \
     rm -rf /var/lib/apt/lists/*
 
-RUN git clone --depth 1 https://github.com/travisgoodspeed/md380tools.git /opt/codec-ambe
-COPY ambe.c /opt/codec-ambe/emulator
+RUN git clone --depth 1 https://github.com/igorsitdikov/md380tools.git /opt/codec-ambe
+
 RUN mkdir -p /etc/udev/rules.d/ && \
     cd /opt/codec-ambe && \
     make && \
